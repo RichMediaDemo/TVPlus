@@ -74,20 +74,40 @@
   align-items: center;
   justify-content: center;
 }
-iframe.mobile-frame {
-  width: 260px;
-  height: 460px;
-  border: none;
-  border-radius: 20px;
-  margin-top: 40px;
+ .mobile-frame-wrapper {
+  position: relative;
+  width: 360px;
+  height: 720px;
+  background: #000; /* kasa rengi */
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-    iframe.mobile-frame {
-      width: 320px;
-      height: 480px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 50px;
-    }
+
+.mobile-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 30px;
+  background: #000;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 10;
+}
+
+iframe.mobile-frame {
+  width: 320px;
+  height: 640px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+}
+
     .hidden {
       display: none;
     }
@@ -132,8 +152,10 @@ iframe.mobile-frame {
 <div class="iframe-container">
   <iframe id="desktopFrame" class="desktop-frame" src="Desktop/desktop.html"></iframe>
   <div id="mobileFrameWrapper" class="mobile-frame-wrapper hidden">
-    <iframe id="mobileFrame" class="mobile-frame" src="Mobile/mobile.html"></iframe>
-  </div>
+  <div class="mobile-notch"></div> <!-- YENİ SATIR -->
+  <iframe id="mobileFrame" class="mobile-frame" src="Mobile/mobile.html"></iframe>
+</div>
+
 </div>
 
 <div class="content">
