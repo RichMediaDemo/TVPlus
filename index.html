@@ -64,50 +64,47 @@
       border: none;
       border-radius: 12px;
     }
-   .mobile-frame-wrapper {
-  position: relative;
-  width: 360px;
-  height: 720px;
-  background: url('Mobile/video-cerceve.png') no-repeat center center;
-  background-size: contain;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
- .mobile-frame-wrapper {
-  position: relative;
-  width: 360px;
-  height: 720px;
-  background: #000; /* kasa rengi */
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.mobile-notch {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 30px;
-  background: #000;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  z-index: 10;
-}
-
-iframe.mobile-frame {
-  width: 320px;
-  height: 640px;
-  border: none;
-  border-radius: 30px;
-  background: white;
-}
-
+    .mobile-frame-wrapper {
+      position: relative;
+      width: 360px;
+      height: 720px;
+      background: #000; /* kasa rengi */
+      border-radius: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+      padding-top: 40px; /* çentikten boşluk */
+    }
+    .mobile-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 30px;
+      background: #000;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      z-index: 10;
+    }
+    iframe.mobile-frame {
+      width: 320px;
+      height: 600px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+    }
+    .home-button {
+      margin-top: 20px;
+      width: 60px;
+      height: 60px;
+      background: #333;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
     .hidden {
       display: none;
     }
@@ -152,10 +149,10 @@ iframe.mobile-frame {
 <div class="iframe-container">
   <iframe id="desktopFrame" class="desktop-frame" src="Desktop/desktop.html"></iframe>
   <div id="mobileFrameWrapper" class="mobile-frame-wrapper hidden">
-  <div class="mobile-notch"></div> <!-- YENİ SATIR -->
-  <iframe id="mobileFrame" class="mobile-frame" src="Mobile/mobile.html"></iframe>
-</div>
-
+    <div class="mobile-notch"></div>
+    <iframe id="mobileFrame" class="mobile-frame" src="Mobile/mobile.html"></iframe>
+    <div class="home-button"></div>
+  </div>
 </div>
 
 <div class="content">
