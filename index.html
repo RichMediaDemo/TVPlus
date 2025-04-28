@@ -64,16 +64,23 @@
       border: none;
       border-radius: 12px;
     }
-    .mobile-frame-wrapper {
-      position: relative;
-      width: 320px;
-      height: 600px;
-      background: url('Mobile/video-cerceve.png') no-repeat center center;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+   .mobile-frame-wrapper {
+  position: relative;
+  width: 360px;
+  height: 720px;
+  background: url('Mobile/video-cerceve.png') no-repeat center center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+iframe.mobile-frame {
+  width: 260px;
+  height: 460px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 40px;
+}
     iframe.mobile-frame {
       width: 320px;
       height: 480px;
